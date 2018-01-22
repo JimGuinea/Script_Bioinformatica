@@ -831,3 +831,281 @@ accN_index_successivo: Nessuno
 accN_esatto:  >098
 accN_successivo: Nessuno
 -------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  7
+accN_esatto:  >pippo
+accN_successivo:  >luca
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  tggggtgttaac
+accN_index:  8
+accN_index_successivo:  9
+accN_esatto:  >luca
+accN_successivo:  >anna
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  14
+accN_esatto:  >quo
+accN_successivo:  >zorro
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  16
+accN_esatto:  >zorro
+accN_successivo:  >098
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  tttgtgc
+accN_index:  17
+accN_index_successivo: Nessuno
+accN_esatto:  >098
+accN_successivo: Nessuno
+-------------------------
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  7
+accN_esatto:  >pippo
+accN_successivo:  >luca
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  tggggtgttaac
+accN_index:  8
+accN_index_successivo:  9
+accN_esatto:  >luca
+accN_successivo:  >anna
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  14
+accN_esatto:  >quo
+accN_successivo:  >zorro
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  16
+accN_esatto:  >zorro
+accN_successivo:  >098
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  tttgtgc
+accN_index:  17
+accN_index_successivo: Nessuno
+accN_esatto:  >098
+accN_successivo: Nessuno
+-------------------------
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_esatto:  >pippo
+accN_successivo:  >luca
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_esatto:  >luca
+accN_successivo:  >anna
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_esatto:  >quo
+accN_successivo:  >zorro
+NON mel caso EOF
+-------------------------
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_esatto:  >zorro
+accN_successivo:  >098
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo: Nessuno
+accN_esatto:  >098
+accN_successivo: Nessuno
+-------------------------
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  7
+accN_esatto:  >pippo
+accN_successivo:  >luca
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  tggggtgttaac
+accN_index:  8
+accN_index_successivo:  9
+accN_esatto:  >luca
+accN_successivo:  >anna
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  14
+accN_esatto:  >quo
+accN_successivo:  >zorro
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  16
+accN_esatto:  >zorro
+accN_successivo:  >098
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  tttgtgc
+accN_index:  17
+accN_index_successivo: Nessuno
+accN_esatto:  >098
+accN_successivo: Nessuno
+-------------------------
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo: Nessuno
+accN_successivo: Nessuno
+-------------------------
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  0
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  4
+accN_successivo:  >pippo
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  1
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  7
+accN_successivo:  >luca
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  3
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  12
+accN_successivo:  >quo
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  4
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  14
+accN_successivo:  >zorro
+NON nel caso EOF
+-------------------------
+
+Counter accession Number:  5
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------

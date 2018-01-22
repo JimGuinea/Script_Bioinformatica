@@ -71,8 +71,8 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 				#~ counter_multiF +=1
 				if query == accessionN : #condizione di uguaglianza tra query e accession number
 					
-					accN_esatto = accessionN_multifasta[counter_accessionN+1]
-					accN_index = fasta_completo.index(accN_esatto) +1
+					#~ accN_esatto = accessionN_multifasta[counter_accessionN+1]
+					accN_index = fasta_completo.index(query) 
 					
 
 					print('accN_index: ', accN_index)		#debug
@@ -87,11 +87,15 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						if accN_index >= len(fasta_completo)-1: #caso EOF
 							for index in range(accN_index, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
+							with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
+
 						else:
-							accN_successivo = accessionN_multifasta[counter_accessionN+2]
+							accN_successivo = accessionN_multifasta[counter_accessionN+1]
 							accN_index_succ = fasta_completo.index(accN_successivo)
 							for index in range(accN_index, accN_index_succ):
 								complete_seq += fasta_completo[index]
+							with open('debug.txt','a') as file_backup: print ('NON nel caso EOF', file=file_backup)
+
 						
 						print(query, file=file_output)			
 						print(complete_seq, file=file_output)
@@ -102,9 +106,10 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
 							print ('accN_index: ', accN_index, file=file_backup)
 							print ('accN_index_successivo: ', accN_index_succ, file=file_backup)
-							print ('accN_esatto: ', accN_esatto, file= file_backup)
+							#~ print ('accN_esatto: ', accN_esatto, file= file_backup)
 							print ('accN_successivo: ', accN_successivo, file= file_backup)
-							
+							with open('debug.txt','a') as file_backup: print ('-------------------------', file=file_backup)
+
 							
 							'''
 							fasta_sequenza_finale = []
@@ -124,7 +129,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
 							print('accN_index: ', accN_index, file=file_backup)
 							print('accN_index_successivo: Nessuno', file=file_backup)
-							print('accN_esatto: ', accN_esatto, file= file_backup)
+							#~ print('accN_esatto: ', accN_esatto, file= file_backup)
 							print('accN_successivo: Nessuno', file= file_backup)
 							
 	with open('debug.txt','a') as file_backup:
