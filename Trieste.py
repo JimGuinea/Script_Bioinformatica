@@ -66,73 +66,69 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 
 	with open(fp_output, 'w') as file_output:
 		for counter_accessionN, accessionN in enumerate(accessionN_multifasta):
-			
+			print('ENUMERATE ACCESSION_MULTIFASTA ', accessionN_multifasta)
+			print('COUNTER ACCESSION ', counter_accessionN)
 			for query in lista_query:
 				#~ counter_multiF +=1
 				if query == accessionN : #condizione di uguaglianza tra query e accession number
-					
-					#~ accN_esatto = accessionN_multifasta[counter_accessionN+1]
-					accN_index = fasta_completo.index(query)+1
-					
-
-					print('accN_index: ', accN_index)
+					accN_index = fasta_completo.index(query)	
+					print('accN_index: ', accN_index+1)
 					print('QUERY:', query)		#debug
 					#~ print('accN_esatto: ', accN_esatto)  #debug
 					
-					#~ try:
-					print('hello') #debug
-					complete_seq=""
-					print("COUNTE ACCESSION", counter_accessionN)
-					print("LEN FASTA COMPLETO" , len(fasta_completo))
-					
-					if accN_index >= len(fasta_completo): #caso EOF
-						for index in range(accN_index+1, fasta_completo[len(fasta_completo)]): #<-----E' qui il problema!
-							complete_seq += fasta_completo[index]
-						with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
+					try:
+						complete_seq=""
+						print("COUNTE ACCESSION", counter_accessionN)
+						print("LEN FASTA COMPLETO" , len(fasta_completo))
+						
+						if accN_index >= len(fasta_completo): #caso EOF
+							for index in range(accN_index+1, fasta_completo[len(fasta_completo)]): #<-----E' qui il problema!
+								complete_seq += fasta_completo[index]
+							with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
 
-					else:
-						accN_successivo = accessionN_multifasta[counter_accessionN+1] #<---- Il tutto sta nel mettere o levare sto +1
-						accN_index_succ = fasta_completo.index(accN_successivo)
-						for index in range(accN_index, accN_index_succ):
-							complete_seq += fasta_completo[index]
-						with open('debug.txt','a') as file_backup: print ('NON nel caso EOF', file=file_backup)
+						else:
+							accN_successivo = accessionN_multifasta[counter_accessionN+1] #<---- Il tutto sta nel mettere o levare sto +1
+							accN_index_succ = fasta_completo.index(accN_successivo)
+							for index in range(accN_index+1, accN_index_succ):
+								complete_seq += fasta_completo[index]
+							with open('debug.txt','a') as file_backup: print ('NON nel caso EOF', file=file_backup)
 
-					
-					print(query, file=file_output)			
-					print(complete_seq, file=file_output)
-					
-					with open('debug.txt', 'a') as file_backup:
-						print ('\nCounter accession Number: ',counter_accessionN, file=file_backup)	
-						print ('Query: ',query, file=file_backup)
-						print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
-						print ('accN_index: ', accN_index, file=file_backup)
-						print ('accN_index_successivo: ', accN_index_succ, file=file_backup)
-						#~ print ('accN_esatto: ', accN_esatto, file= file_backup)
-						print ('accN_successivo: ', accN_successivo, file= file_backup)
-						print ('-------------------------', file=file_backup)
+						
+						print(query, file=file_output)			
+						print(complete_seq, file=file_output)
+						
+						with open('debug.txt', 'a') as file_backup:
+							print ('\nCounter accession Number: ',counter_accessionN, file=file_backup)	
+							print ('Query: ',query, file=file_backup)
+							print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
+							print ('accN_index: ', accN_index, file=file_backup)
+							print ('accN_index_successivo: ', accN_index_succ, file=file_backup)
+							#~ print ('accN_esatto: ', accN_esatto, file= file_backup)
+							print ('accN_successivo: ', accN_successivo, file= file_backup)
+							print ('-------------------------', file=file_backup)
 
-							
-						'''
-						fasta_sequenza_finale = []
-						for v4 in fasta_completo:
-							while accN_index != accN_index_succ:
-								counter_accN_index = accN_index +1
-								sequenza = fasta_sequenza_finale[accN_index]
-								sequenza = fasta_sequenza_finale.append(counter_accN_inde)
-								accN_index +=1
-						print('Sequenza finale: ', sequenza, file=file_output)
-						'''
-					#~ except IndexError:
-						#~ with open('debug.txt', 'a') as file_backup:
-							#~ print('NELLA ECCEZIONE', file=file_backup)
-							#~ print ("INDEX ERROR")
-							#~ print ('\nCounter accession Number: ',counter_accessionN,  file=file_backup)	
-							#~ print ('Query: ',query, file=file_backup)
-							#~ print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
-							#~ print('accN_index: ', accN_index, file=file_backup)
-							#~ print('accN_index_successivo: ', accN_index_succ, file=file_backup)
-							#~ #print('accN_esatto: ', accN_esatto, file= file_backup)
-							#~ print('accN_successivo: ', accN_successivo, file= file_backup)
+								
+							'''
+							fasta_sequenza_finale = []
+							for v4 in fasta_completo:
+								while accN_index != accN_index_succ:
+									counter_accN_index = accN_index +1
+									sequenza = fasta_sequenza_finale[accN_index]
+									sequenza = fasta_sequenza_finale.append(counter_accN_inde)
+									accN_index +=1
+							print('Sequenza finale: ', sequenza, file=file_output)
+							'''
+					except IndexError:
+						with open('debug.txt', 'a') as file_backup:
+							print('NELLA ECCEZIONE', file=file_backup)
+							print ("INDEX ERROR")
+							print ('\nCounter accession Number: ',counter_accessionN,  file=file_backup)	
+							print ('Query: ',query, file=file_backup)
+							print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
+							print('accN_index: ', accN_index, file=file_backup)
+							print('accN_index_successivo: ', accN_index_succ, file=file_backup)
+							#print('accN_esatto: ', accN_esatto, file= file_backup)
+							print('accN_successivo: ', accN_successivo, file= file_backup)
 							
 		counter_accessionN -=1				
 	with open('debug.txt','a') as file_backup:
