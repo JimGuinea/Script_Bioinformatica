@@ -72,10 +72,11 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 				if query == accessionN : #condizione di uguaglianza tra query e accession number
 					
 					#~ accN_esatto = accessionN_multifasta[counter_accessionN+1]
-					accN_index = fasta_completo.index(query)
+					accN_index = fasta_completo.index(query)+1
 					
 
-					print('accN_index: ', accN_index)		#debug
+					print('accN_index: ', accN_index)
+					print('QUERY:', query)		#debug
 					#~ print('accN_esatto: ', accN_esatto)  #debug
 					
 					#~ try:
@@ -90,7 +91,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
 
 					else:
-						accN_successivo = accessionN_multifasta[counter_accessionN]
+						accN_successivo = accessionN_multifasta[counter_accessionN+1] #<---- Il tutto sta nel mettere o levare sto +1
 						accN_index_succ = fasta_completo.index(accN_successivo)
 						for index in range(accN_index, accN_index_succ):
 							complete_seq += fasta_completo[index]
@@ -133,7 +134,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							#~ #print('accN_esatto: ', accN_esatto, file= file_backup)
 							#~ print('accN_successivo: ', accN_successivo, file= file_backup)
 							
-		#~ counter_accessionN -=1				
+		counter_accessionN -=1				
 	with open('debug.txt','a') as file_backup:
 		print ('-------------------------', file=file_backup)
 
