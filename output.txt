@@ -1,10 +1,8 @@
 >pippo
-actgcagtctgaccggtctgatgctgacaggtgtcaacagtaahgy>pippoaaaaaa
+aaaaaa
 >luca
-aaaaaacccgtgtg>lucatggggtgttaac
+tggggtgttaac
 >quo
-ttggtaatataattttt>quoaggtgat
+aggtgat
 >zorro
-aggtgat>zorrottttgtg
->098
-ttttgtg>098tttgtgc
+ttttgtg
