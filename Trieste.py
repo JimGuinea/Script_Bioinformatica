@@ -88,8 +88,8 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							for index in range(accN_index, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
 						else:
-							accN_successivo = accessionN_multifasta[counter_accessionN+1]
-							accN_index_succ = fasta_completo.index(accN_successivo)+2
+							accN_successivo = accessionN_multifasta[counter_accessionN+2]
+							accN_index_succ = fasta_completo.index(accN_successivo)
 							for index in range(accN_index, accN_index_succ):
 								complete_seq += fasta_completo[index]
 						
