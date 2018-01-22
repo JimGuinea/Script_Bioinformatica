@@ -4315,3 +4315,500 @@ accN_index:  16
 accN_index_successivo:  16
 accN_successivo:  >098
 -------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  4
+accN_successivo:  >pippo
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  12
+accN_successivo:  >quo
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  4
+accN_successivo:  >pippo
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  12
+accN_successivo:  >quo
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  1
+Query:  >pippo
+Output fasta:  >pippo
+accN_index:  4
+accN_index_successivo:  7
+accN_successivo:  >luca
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  2
+Query:  >luca
+Output fasta:  >luca
+accN_index:  7
+accN_index_successivo:  9
+accN_successivo:  >anna
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  4
+Query:  >quo
+Output fasta:  >quo
+accN_index:  12
+accN_index_successivo:  14
+accN_successivo:  >zorro
+-------------------------
+NON nel caso EOF
+
+Counter accession Number:  5
+Query:  >zorro
+Output fasta:  >zorro
+accN_index:  14
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------
+NELLA ECCEZIONE
+
+Counter accession Number:  6
+Query:  >098
+Output fasta:  >098
+accN_index:  16
+accN_index_successivo:  16
+accN_successivo:  >098
+-------------------------

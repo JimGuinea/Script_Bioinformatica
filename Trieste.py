@@ -85,6 +85,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							for index in range(accN_index+1, fasta_completo[len(fasta_completo)]): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
 							with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
+				
 
 						else:
 							accN_successivo = accessionN_multifasta[counter_accessionN+1] #<---- Il tutto sta nel mettere o levare sto +1
@@ -130,7 +131,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							#print('accN_esatto: ', accN_esatto, file= file_backup)
 							print('accN_successivo: ', accN_successivo, file= file_backup)
 							
-		counter_accessionN -=1				
+		#~ counter_accessionN -=1				
 	with open('debug.txt','a') as file_backup:
 		print ('-------------------------', file=file_backup)
 
