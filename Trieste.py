@@ -85,14 +85,14 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						print("LEN FASTA COMPLETO" , len(fasta_completo))
 						
 						if accN_index >= len(fasta_completo)-1: #caso EOF
-							for index in range(accN_index, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
+							for index in range(accN_index+1, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
 							with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
 
 						else:
 							accN_successivo = accessionN_multifasta[counter_accessionN+1]
-							accN_index_succ = fasta_completo.index(accN_successivo)
-							for index in range(accN_index, accN_index_succ):
+							accN_index_succ = fasta_completo.index(accN_successivo)+1
+							for index in range(accN_index+1, accN_index_succ):
 								complete_seq += fasta_completo[index]
 							with open('debug.txt','a') as file_backup: print ('NON nel caso EOF', file=file_backup)
 
