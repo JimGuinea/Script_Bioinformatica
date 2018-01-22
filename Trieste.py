@@ -66,13 +66,13 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 
 	with open(fp_output, 'w') as file_output:
 		for counter_accessionN, accessionN in enumerate(accessionN_multifasta):
-			counter_accessionN -=1
+			
 			for query in lista_query:
 				#~ counter_multiF +=1
 				if query == accessionN : #condizione di uguaglianza tra query e accession number
 					
 					#~ accN_esatto = accessionN_multifasta[counter_accessionN+1]
-					accN_index = fasta_completo.index(query) 
+					accN_index = fasta_completo.index(query) +1
 					
 
 					print('accN_index: ', accN_index)		#debug
@@ -84,15 +84,15 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						print("COUNTE ACCESSION", counter_accessionN)
 						print("LEN FASTA COMPLETO" , len(fasta_completo))
 						
-						if accN_index >= len(fasta_completo)-1: #caso EOF
-							for index in range(accN_index+1, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
+						if accN_index >= len(fasta_completo): #caso EOF
+							for index in range(accN_index, fasta_completo[len(fasta_completo)]): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
 							with open('debug.txt','a') as file_backup: print ('Nel caso EOF', file=file_backup)
 
 						else:
 							accN_successivo = accessionN_multifasta[counter_accessionN+1]
-							accN_index_succ = fasta_completo.index(accN_successivo)+1
-							for index in range(accN_index+1, accN_index_succ):
+							accN_index_succ = fasta_completo.index(accN_successivo)
+							for index in range(accN_index, accN_index_succ):
 								complete_seq += fasta_completo[index]
 							with open('debug.txt','a') as file_backup: print ('NON nel caso EOF', file=file_backup)
 
@@ -108,7 +108,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							print ('accN_index_successivo: ', accN_index_succ, file=file_backup)
 							#~ print ('accN_esatto: ', accN_esatto, file= file_backup)
 							print ('accN_successivo: ', accN_successivo, file= file_backup)
-							with open('debug.txt','a') as file_backup: print ('-------------------------', file=file_backup)
+							print ('-------------------------', file=file_backup)
 
 							
 							'''
@@ -123,6 +123,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 					'''
 					except IndexError:
 						with open('debug.txt', 'a') as file_backup:
+							print('NELLA ECCEZIONE', file=file_backup)
 							print ("INDEX ERROR")
 							print ('\nCounter accession Number: ',counter_accessionN,  file=file_backup)	
 							print ('Query: ',query, file=file_backup)
@@ -132,6 +133,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							#~ print('accN_esatto: ', accN_esatto, file= file_backup)
 							print('accN_successivo: Nessuno', file= file_backup)
 							
+		#~ counter_accessionN -=1				
 	with open('debug.txt','a') as file_backup:
 		print ('-------------------------', file=file_backup)
 
