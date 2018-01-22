@@ -91,8 +91,8 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							accN_index_succ = fasta_completo.index(accN_successivo)+2
 							for index in range(accN_index, accN_index_succ):
 								complete_seq += fasta_completo[index]
-							print(query, file=file_output)			
-							print(complete_seq, file=file_output)
+						print(query, file=file_output)			
+						print(complete_seq, file=file_output)
 						with open('debug.txt', 'a') as file_backup:
 							print ('\nCounter accession Number: ',counter_accessionN,'\nContatore_query: ',counter_query, '\nContatore_multiF : ',counter_multiF, file=file_backup)	
 							print ('Query: ',query, file=file_backup)
