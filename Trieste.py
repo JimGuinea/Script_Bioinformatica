@@ -83,6 +83,7 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						complete_seq=""
 						print("COUNTE ACCESSION", counter_accessionN)
 						print("LEN FASTA COMPLETO" , len(fasta_completo))
+						
 						if accN_index >= len(fasta_completo)-1: #caso EOF
 							for index in range(accN_index, fasta_completo[len(fasta_completo)]-1): #<-----E' qui il problema!
 								complete_seq += fasta_completo[index]
@@ -91,8 +92,10 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							accN_index_succ = fasta_completo.index(accN_successivo)+2
 							for index in range(accN_index, accN_index_succ):
 								complete_seq += fasta_completo[index]
+						
 						print(query, file=file_output)			
 						print(complete_seq, file=file_output)
+						
 						with open('debug.txt', 'a') as file_backup:
 							print ('\nCounter accession Number: ',counter_accessionN,'\nContatore_query: ',counter_query, file=file_backup)	
 							print ('Query: ',query, file=file_backup)
