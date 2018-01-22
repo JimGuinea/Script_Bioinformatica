@@ -1,0 +1,10 @@
+>pippo
+actgcagtctgaccggtctgatgctgacaggtgtcaacagtaahgy>pippoaaaaaa
+>luca
+aaaaaacccgtgtg>lucatggggtgttaac
+>quo
+ttggtaatataattttt>quoaggtgat
+>zorro
+aggtgat>zorrottttgtg
+>098
+ttttgtg>098tttgtgc

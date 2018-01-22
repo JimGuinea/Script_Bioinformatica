@@ -1,0 +1,637 @@
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo: Nessuno
+accN_esatto:  >zorro
+accN_successivo: Nessuno
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11 
+Contatore_multiF :  12
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18 
+Contatore_multiF :  19
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33 
+Contatore_multiF :  34
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40 
+Contatore_multiF :  41
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52 
+Contatore_multiF :  53
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  1 
+Contatore_query:  18
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  3 
+Contatore_query:  33
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  4 
+Contatore_query:  40
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  5 
+Contatore_query:  52
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------
+-------------------------
+-------------------------
+-------------------------
+
+Counter accession Number:  0 
+Contatore_query:  11
+Query:  >pippo
+Output fasta:  actgcagtctgaccggtctgatgctgaca
+accN_index:  1
+accN_index_successivo:  6
+accN_esatto:  >pluto
+accN_successivo:  >pippo
+
+Counter accession Number:  1 
+Contatore_query:  18
+Query:  >luca
+Output fasta:  aaaaaa
+accN_index:  5
+accN_index_successivo:  9
+accN_esatto:  >pippo
+accN_successivo:  >luca
+
+Counter accession Number:  3 
+Contatore_query:  33
+Query:  >quo
+Output fasta:  ttggtaatataa
+accN_index:  10
+accN_index_successivo:  14
+accN_esatto:  >anna
+accN_successivo:  >quo
+
+Counter accession Number:  4 
+Contatore_query:  40
+Query:  >zorro
+Output fasta:  aggtgat
+accN_index:  13
+accN_index_successivo:  16
+accN_esatto:  >quo
+accN_successivo:  >zorro
+
+Counter accession Number:  5 
+Contatore_query:  52
+Query:  >098
+Output fasta:  ttttgtg
+accN_index:  15
+accN_index_successivo:  18
+accN_esatto:  >zorro
+accN_successivo:  >098
+-------------------------

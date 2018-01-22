@@ -62,13 +62,13 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 	
 	print('Accession number mutlifasta: ',accessionN_multifasta)
 	counter_accessionN = 0
-	counter_multiF = 0
+	#~ counter_multiF = 0
 	counter_query = 0
 	with open(fp_output, 'w') as file_output:
 		for counter_accessionN, accessionN in enumerate(accessionN_multifasta):
 			counter_accessionN -=1
 			for query in lista_query:
-				counter_multiF +=1
+				#~ counter_multiF +=1
 				if query == accessionN : #condizione di uguaglianza tra query e accession number
 					
 					accN_esatto = accessionN_multifasta[counter_accessionN]
@@ -94,14 +94,14 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 						print(query, file=file_output)			
 						print(complete_seq, file=file_output)
 						with open('debug.txt', 'a') as file_backup:
-							print ('\nCounter accession Number: ',counter_accessionN,'\nContatore_query: ',counter_query, '\nContatore_multiF : ',counter_multiF, file=file_backup)	
+							print ('\nCounter accession Number: ',counter_accessionN,'\nContatore_query: ',counter_query, file=file_backup)	
 							print ('Query: ',query, file=file_backup)
 							print ('Output fasta: ', fasta_completo[accN_index], file=file_backup)
 							print ('accN_index: ', accN_index, file=file_backup)
 							print ('accN_index_successivo: ', accN_index_succ, file=file_backup)
 							print ('accN_esatto: ', accN_esatto, file= file_backup)
 							print ('accN_successivo: ', accN_successivo, file= file_backup)
-							print ('-------------------------', file=file_backup)
+							
 							
 							'''
 							fasta_sequenza_finale = []
@@ -123,8 +123,10 @@ with open(fp_multiF_input, 'r') as file_multiF_input:
 							print('accN_index_successivo: Nessuno', file=file_backup)
 							print('accN_esatto: ', accN_esatto, file= file_backup)
 							print('accN_successivo: Nessuno', file= file_backup)
-							print('-------------------------', file=file_backup)
+							
 				counter_query +=1
+	with open('debug.txt','a') as file_backup:
+		print ('-------------------------', file=file_backup)
 
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
