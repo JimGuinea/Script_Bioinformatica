@@ -6,3 +6,5 @@ tggggtgttaac
 aggtgat
 >zorro
 ttttgtg
+>098
+tttgtgc
