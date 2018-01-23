@@ -31,5 +31,4 @@ with open(sequences_file, 'r') as file_multiF_input:
                 usefull_seq_flag = True
                 seq_string = ""
         # resta in sospeso un eventuale ultima sequenza
-    if usefull_seq_flag:
-        print("SEQ - " + seq_string)
+    if usefull_seq_flag: print("SEQ - " + seq_string)
