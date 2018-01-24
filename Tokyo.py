@@ -61,24 +61,6 @@ with open (output_file, 'w') as fo:
 				
 				if locus_tag == locus_tag_precedente :
 					go_split_new='' #condizione di uguaglianza tra due locus_tag successivi
-					# ~ print('GO SPLIT PRECEDENTE' , go_split_precedente)
-					# ~ print('GO SPLIT' , go_split)
-					
-					# ~ for elem in go_split:
-						# ~ print('GO_SPLIT ----->', go_split)
-						# ~ ## ~ go_split_new.append(go_split)
-						# ~ for elem2 in go_split_precedente:
-							# ~ if elem != elem2: #condizione di DISuguaglianza tra almeno uno degli elementi della lista go_split_precedente e go_split attuale
-								# ~ go_split_new += elem2+'|'
-								# ~ ## ~ go_split.append(go_split_new)
-								# ~ ## ~ go_split_precedente[:]=[]
-								# ~ print('GO_SPLIT_NEW ----> ', go_split_new)
-								# ~ print('OUTPUT: ',locus_tag, '\t' ,go_split_new)
-							# ~ else: 
-								# ~ print('Elem e go_split differenti')
-						# ~ ## ~ go_split_new =''
-					# ~ print(locus_tag,'\t',go_split_new, file=fo)
-					# ~ go_split_new += ''.join(set(go_split) & set(go_split_precedente))
 					go_split_new=go_split + go_split_precedente
 					go_split_output = [output.append(item) for item in go_split_new if item not in output]
 					print('GO SPLIT NEW ', go_split_new)
