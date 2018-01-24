@@ -28,39 +28,18 @@ import time
 
 tempo_iniziale = time.time()
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6b1bd3b276f2e5850b3b5d548a80be9147200355
 parser = argparse.ArgumentParser(description='Cercatore di sequenze in Multifasta')
 parser.add_argument('-i', '--input', help = 'inserire il file multifasta di input')
 parser.add_argument('-L', '--List', help  = 'inserire il file lista dove sono presenti gli Accession Number da ricercare')
 parser.add_argument('-o', '--output', help = 'inserire il file di output')
-=======
-
-parser = argparse.ArgumentParser(description = 'Script a cui dato un file con una lista di nomi di sequenze in formato fasta (>nome_sequenza), ricerca le sequenze in un file MultiFasta e scrive le sequenze trovate in un altro file MultiFasta')
-parser.add_argument('-i', '--input', metavar='', help = 'File multifasta di input')
-parser.add_argument('-L', '--List', metavar='', help  = 'File lista dove sono presenti gli Accession Number da ricercare')
-parser.add_argument('-o', '--output', metavar='', help = 'Nome del file di output')
-parser.add_argument('--version', action='version', version='%(prog)s 1.0')
->>>>>>> 1b854d24b63e12ed6506cb18cbd2f39d853b25b2
 args = parser.parse_args()
 
 query_file = args.List
 sequences_file = args.input
 output_file = args.output
 
-if output_file == None:
-	output_file= 'output.fasta'
-
-print('RUNNING')	
-
 with open(output_file, 'w') as fo:
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 6b1bd3b276f2e5850b3b5d548a80be9147200355
 	with open(query_file, 'r') as file_query_input:   		#apre il file delle Query
 		lista_query_0 = file_query_input.read().splitlines() 	#salva tutte le righe in una lista chiamata "lista_query"
 		print('LISTA QUERY', lista_query_0)
@@ -68,14 +47,6 @@ with open(output_file, 'w') as fo:
 			#~ lista_query = '>' + line
 		lista_query = [ '>' + line for line in lista_query_0 ] 
 		print('LISTA QUERY 2', lista_query)
-<<<<<<< HEAD
-=======
-=======
-	with open(query_file, 'r') as file_query_input: 	   #apre il file delle Query
-		lista_query = file_query_input.read().splitlines() #salva tutte le righe in una lista chiamata "lista_query"
-
->>>>>>> 1b854d24b63e12ed6506cb18cbd2f39d853b25b2
->>>>>>> 6b1bd3b276f2e5850b3b5d548a80be9147200355
 	with open(sequences_file, 'r') as file_multiF_input: 	#apre il file delle sequenze da analizzare
 		usefull_seq_flag = False							#flag che indica quando un titolo utile è stato trovato
 		seq_string = "" 									#Stringa dove metterci la stringa da stampare alla fine
@@ -101,8 +72,6 @@ with open(output_file, 'w') as fo:
 	if usefull_seq_flag:
 		print(seq_string, file=fo)
 
-
-		
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
 print('Tempo di esecuzione: ', tempo_esecuzione, 'secondi')
