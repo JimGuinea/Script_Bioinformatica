@@ -36,35 +36,65 @@ args = parser.parse_args()
 
 TSV_file = args.input
 output_file = args.output
+go_split_new=''
+output=[]
+go_split_output=[]
 
 with open (output_file, 'w') as fo:
 	with open(TSV_file, 'r') as fi:
 		fi = csv.reader(fi, delimiter='\t')
-		fo = csv.writer(fo)
+		# ~ fo = csv.writer(fo)
 		locus_tag_precedente = ''
+		go_split_precedente = ''
 		flag = False
 		for line in fi:
+			# ~ go_split_new = ''
 			locus_tag = str(line[0])
 			# ~ locus_tag = list(enumerate(locus_tag, 1))
 			go = str(line[1])
 			go_split = go.split('|')
 			print('LOCUS TAG ', locus_tag)
-			print('GO ', go)
-			print('GO SPLITTED', go_split)
-
+			# ~ print('GO ', go)
+			# ~ print('GO SPLITTED', go_split)
+			
 			if flag : #iterazioni successive
-				if locus_tag == locus_tag_precedente : #condizione di uguaglianza tra due locus_tag successivi
-					print('ehy!')
+				
+				if locus_tag == locus_tag_precedente :
+					go_split_new='' #condizione di uguaglianza tra due locus_tag successivi
+					# ~ print('GO SPLIT PRECEDENTE' , go_split_precedente)
+					# ~ print('GO SPLIT' , go_split)
+					
+					# ~ for elem in go_split:
+						# ~ print('GO_SPLIT ----->', go_split)
+						# ~ ## ~ go_split_new.append(go_split)
+						# ~ for elem2 in go_split_precedente:
+							# ~ if elem != elem2: #condizione di DISuguaglianza tra almeno uno degli elementi della lista go_split_precedente e go_split attuale
+								# ~ go_split_new += elem2+'|'
+								# ~ ## ~ go_split.append(go_split_new)
+								# ~ ## ~ go_split_precedente[:]=[]
+								# ~ print('GO_SPLIT_NEW ----> ', go_split_new)
+								# ~ print('OUTPUT: ',locus_tag, '\t' ,go_split_new)
+							# ~ else: 
+								# ~ print('Elem e go_split differenti')
+						# ~ ## ~ go_split_new =''
+					# ~ print(locus_tag,'\t',go_split_new, file=fo)
+					# ~ go_split_new += ''.join(set(go_split) & set(go_split_precedente))
+					go_split_new=go_split + go_split_precedente
+					go_split_output = [output.append(item) for item in go_split_new if item not in output]
+					print('GO SPLIT NEW ', go_split_new)
+					print(locus_tag,'\t', output, file=fo)
 				else:
+					print(locus_tag,'\t', go, file=fo)
 					flag = False
 			else: #prima iterazione
 				locus_tag_precedente = locus_tag
+				go_split_precedente = go_split
 				flag = True
 				print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
-			
 			print('FLAG' ,flag)
 			print('-------')
-			
-			
+
+
+
 
 
