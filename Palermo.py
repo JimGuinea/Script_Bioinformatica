@@ -31,7 +31,7 @@ tempo_iniziale = time.time()
 parser = argparse.ArgumentParser(description='Cercatore di sequenze in Multifasta')
 parser.add_argument('-i', '--input', help = 'inserire il file multifasta di input')
 parser.add_argument('-L', '--List', help  = 'inserire il file lista dove sono presenti gli Accession Number da ricercare')
-parser.add_argument('-o', '--output', help = 'inserire il file di output')
+parser.add_argument('-o', '--output', default = 'output.fa', help = 'inserire il file di output')
 args = parser.parse_args()
 
 query_file = args.List
