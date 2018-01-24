@@ -1,3 +1,13 @@
+#title           :Palermo.py
+#description     :Dato un file multifasta e una lista di Accession Number in formasto fasta, lo script cerca tutte le sequenze della lista nel MultiFasta e le scrive in un secondo file MultiFasta
+#author          :Luca M. e Luca P.
+#date            :20180123
+#version         :1.0
+#usage           :
+#notes           :
+#python_version  :3.6.0 
+#==============================================================================
+
 import os
 import argparse
 import time
@@ -5,10 +15,10 @@ import time
 tempo_iniziale = time.time()
 
 
-parser = argparse.ArgumentParser(description = 'Script a cui dato un file con una lista di nomi di sequenze in formato fasta (>nome_sequenza), ricerca le sequenze in un file MultiFasta e scrive le sequenze trovate in un altro file MultiFasta')
-parser.add_argument('-i', '--input', metavar='', help = 'File multifasta di input')
-parser.add_argument('-L', '--List', metavar='', help  = 'File lista dove sono presenti gli Accession Number da ricercare')
-parser.add_argument('-o', '--output', metavar='', help = 'Nome del file di output')
+parser = argparse.ArgumentParser(description = 'Script for searching Accession Number in a Multifasta file')
+parser.add_argument('-i', '--input', metavar='', help = 'file multifasta di input')
+parser.add_argument('-L', '--List', metavar='', help  = 'file lista dove sono presenti gli Accession Number da ricercare')
+parser.add_argument('-o', '--output', metavar='', help = 'nome del file di output')
 parser.add_argument('--version', action='version', version='%(prog)s 1.0')
 args = parser.parse_args()
 
@@ -16,21 +26,21 @@ query_file = args.List
 sequences_file = args.input
 output_file = args.output
 
-if output_file == None:
-	output_file= 'output.fasta'
-
-print('RUNNING')	
 
 with open(output_file, 'w') as fo:
 
-	with open(query_file, 'r') as file_query_input: 	   #apre il file delle Query
+	with open(query_file, 'r') as file_query_input:		   #apre il file delle Query
 		lista_query = file_query_input.read().splitlines() #salva tutte le righe in una lista chiamata "lista_query"
 
 	with open(sequences_file, 'r') as file_multiF_input: 	#apre il file delle sequenze da analizzare
+		print('LISTA QUERY',  lista_query)					#DEBUG
+		print(' FILE MULTIF INPUT ', file_multiF_input) 	#DEBUG
 		usefull_seq_flag = False							#flag che indica quando un titolo utile è stato trovato
 		seq_string = "" 									#Stringa dove metterci la stringa da stampare alla fine
 		for line in file_multiF_input: 						#ciclo che passa tutte le righe nel file multifasta (>nomi e sequenze)
 			line_to_check = line.strip() 					#la funzione .strip() rimuove tutti gli spazi vuoti in una stringa
+			#print('LINE ', line) 							#DEBUG
+			#print(line.strip() + " - ") 					#DEBUG
 															#prima mi occupo della seq precedente, poi eventualmente della successiva
 			if usefull_seq_flag: 							#IF di tutte le stringhe che mi interessano, TITOLI o SEQUENZE. se la bandierina è Vera (la prima volta è falsa di default)
 				if line_to_check[0]==">": 					#se la linea del file multifasta inizia con > 
@@ -52,8 +62,6 @@ with open(output_file, 'w') as fo:
 	if usefull_seq_flag:
 		print(seq_string, file=fo)
 
-
-		
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
 print('Tempo di esecuzione: ', tempo_esecuzione, 'Seconds')
