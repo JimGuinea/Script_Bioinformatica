@@ -41,11 +41,11 @@ output_file = args.output
 with open(output_file, 'w') as fo:
 
 	with open(query_file, 'r') as file_query_input:   		#apre il file delle Query
-		lista_query_0 = file_query_input.read().splitlines() 	#salva tutte le righe in una lista chiamata "lista_query"
+		lista_query_0 = file_query_input.read().splitlines() #salva tutte le righe in una lista chiamata "lista_query"
 		print('LISTA QUERY', lista_query_0)
 		#~ for line in lista_query_0:
 			#~ lista_query = '>' + line
-		lista_query = [ '>' + line for line in lista_query_0 ] 
+		lista_query = [ '>' + line.replace( " ", "") for line in lista_query_0 ] 
 		print('LISTA QUERY 2', lista_query)
 	with open(sequences_file, 'r') as file_multiF_input: 	#apre il file delle sequenze da analizzare
 		usefull_seq_flag = False							#flag che indica quando un titolo utile è stato trovato
