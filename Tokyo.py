@@ -38,43 +38,39 @@ TSV_file = args.input
 output_file = args.output
 go_split_new=''
 output=[]
-go_split_output=[]
 
 with open (output_file, 'w') as fo:
 	with open(TSV_file, 'r') as fi:
 		fi = csv.reader(fi, delimiter='\t')
-		# ~ fo = csv.writer(fo)
 		locus_tag_precedente = ''
 		go_split_precedente = ''
 		flag = False
 		for line in fi:
 			# ~ go_split_new = ''
 			locus_tag = str(line[0])
-			# ~ locus_tag = list(enumerate(locus_tag, 1))
 			go = str(line[1])
 			go_split = go.split('|')
-			print('LOCUS TAG ', locus_tag)
+			# ~ print('LOCUS TAG ', locus_tag)
 			# ~ print('GO ', go)
 			# ~ print('GO SPLITTED', go_split)
-			
 			if flag : #iterazioni successive
-				
-				if locus_tag == locus_tag_precedente :
-					go_split_new='' #condizione di uguaglianza tra due locus_tag successivi
+				if locus_tag == locus_tag_precedente : #condizione di uguaglianza tra due locus_tag successivi
 					go_split_new=go_split + go_split_precedente
-					go_split_output = [output.append(item) for item in go_split_new if item not in output]
-					print('GO SPLIT NEW ', go_split_new)
-					print(locus_tag,'\t', output, file=fo)
+					[output.append(item) for item in go_split_new if item not in output]
 				else:
-					print(locus_tag,'\t', go, file=fo)
+					print(locus_tag_precedente,'\t', output)
+					print(locus_tag,'\t', go) #<--------- perfetto
 					flag = False
+					# ~ go_split_precedente=''
 			else: #prima iterazione
 				locus_tag_precedente = locus_tag
 				go_split_precedente = go_split
 				flag = True
-				print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
-			print('FLAG' ,flag)
-			print('-------')
+				output=[]
+				# ~ print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
+			# ~ print('GO SPLIT NEW ', go_split_new)
+			# ~ print('FLAG' ,flag)
+			# ~ print('-------')
 
 
 
