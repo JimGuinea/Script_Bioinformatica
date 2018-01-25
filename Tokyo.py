@@ -55,11 +55,12 @@ with open (output_file, 'w') as fo:
 			# ~ print('GO SPLITTED', go_split)
 			if flag : #iterazioni successive
 				if locus_tag == locus_tag_precedente : #condizione di uguaglianza tra due locus_tag successivi
-					go_split_new=go_split + go_split_precedente
-					[output.append(item) for item in go_split_new if item not in output]
+					go_split_new=go_split + go_split_precedente #unisce gli elementi precedenti agli elementi attuali
+					[output.append(item) for item in go_split_new if item not in output] #cerca tutti gli elementi della lista uguali e ne lascia solo 1
+					output_printable='|'.join(output)
 				else:
-					print(locus_tag_precedente,'\t', output)
-					print(locus_tag,'\t', go) #<--------- perfetto
+					print(locus_tag_precedente,'\t', output_printable, file=fo)
+					print(locus_tag,'\t', go, file =fo) #<--------- perfetto
 					flag = False
 					# ~ go_split_precedente=''
 			else: #prima iterazione
@@ -71,7 +72,9 @@ with open (output_file, 'w') as fo:
 			# ~ print('GO SPLIT NEW ', go_split_new)
 			# ~ print('FLAG' ,flag)
 			# ~ print('-------')
-
+tempo_finale=time.time()
+tempo_esecuzione= tempo_finale-tempo_iniziale
+print('Tempo di esecuzione: ', tempo_esecuzione, 'secondi')
 
 
 
