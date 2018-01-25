@@ -32,12 +32,18 @@ tempo_iniziale = time.time()
 parser = argparse.ArgumentParser(description='TLiMe: TSV Line Merger')
 parser.add_argument('-i', '--input', help = 'inserire il file TSV di input')
 parser.add_argument('-o', '--output', default = 'output.txt', help = 'inserire il file di output')
+#~ parser.add_argument('-C', '--locus_tag', default = 0, help ='inserire la colonna dei Locus Tag (PRIMA COLONNA = 0), di default PRIMA COLONNA (=0)')
+
+#~ parser.add_argument('-c', '--data', default = 1, help='inserire la colonna deid ati da ordinare (PRIMA COLONNA = 0), di default SECONDA COLONNA (=1)')
 args = parser.parse_args()
 
 TSV_file = args.input
 output_file = args.output
 go_split_new=''
 output=[]
+output_printable = ''
+c1 = int(args.locus_tag)
+c2 = int(args.data)
 
 with open (output_file, 'w') as fo:
 	with open(TSV_file, 'r') as fi:
@@ -47,8 +53,8 @@ with open (output_file, 'w') as fo:
 		flag = False
 		for line in fi:
 			# ~ go_split_new = ''
-			locus_tag = str(line[0])
-			go = str(line[1])
+			locus_tag = str(line[c1])
+			go = str(line[c2])
 			go_split = go.split('|')
 			# ~ print('LOCUS TAG ', locus_tag)
 			# ~ print('GO ', go)
