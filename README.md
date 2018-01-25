@@ -6,6 +6,6 @@ Palermo.py : dato un file multifasta, dato un file lista, lo script estrae le se
 
 Cuba.py : dato un file multifasta, lo script estrae tutti i nomi delle sequenze e li salva in un file di output.
 
-Tokyio.py : dato un file TSV, lo script cerca tutti gli elementi uguali nella stessa colonna e li unisce in una riga singola
+Tokyo.py : dato un file TSV, lo script cerca tutti gli elementi uguali nella stessa colonna e li unisce in una riga singola
 
 Cartella laboratorio : tutti file di prova per gli script. 
