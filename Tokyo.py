@@ -41,17 +41,25 @@ output_file = args.output
 output=[]
 locus_tag_precedente = ''
 term_precedente = []
+line_merged = []
 # ~ print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
 # ~ print('TERM PRECEDENTE', term_precedente)
 #~ c1 = int(args.locus_tag)
 #~ c2 = int(args.data)
 
 def list_to_string(lista):
-	outString=""
+	outString=[]
+	outString2=[]
+	str1=''
 	# ~ flag =False
 	for elem in lista:
-		outString +=  elem 
-	return outString
+		outString.append(elem)
+		outString2 = [sublist for sublist in outString if any(sublist)] #ripulisce le sottoliste vuote contenute in una lista
+		print (outString2)
+		# ~ outString[:] = [item for item in outString if item != '']
+		str1='|'.join(str(r) for v in outString2 for r in v)
+		print(str1)
+	return str1
 	
 def print_output(output):
 	for row in output:
@@ -63,13 +71,24 @@ with open (output_file, 'w', newline = '') as fo:
 	with open(TSV_file, 'r') as fi:
 		fi = csv.reader(fi, delimiter=';', quoting=csv.QUOTE_NONE)
 		for line in fi:
+			line[1] = line[1].split('|')
+			# ~ line[1] = [i for i in line[1] if i != '']
+			# ~ for i in line[1]:
+				# ~ line_merged += i
+
 			if flag_first:
 				locus_tag_precedente =line[0]
 				flag_first = False
 			if line[0] == locus_tag_precedente:
 				if line[1] != '':
+					print(line[1])
 					if not line[1] in term_precedente:
+						# ~ term_precedente = line[1].split('|')
 						term_precedente.append(line[1])
+						print(term_precedente)
+
+						# ~ term_precedente = '|'.join(line[1])
+						# ~ print(term_precedente)
 			else:
 				output.append([locus_tag_precedente, term_precedente])
 				term_precedente=[]
