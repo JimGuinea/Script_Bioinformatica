@@ -55,10 +55,10 @@ def list_to_string(lista):
 	for elem in lista:
 		outString.append(elem)
 		outString2 = [sublist for sublist in outString if any(sublist)] #ripulisce le sottoliste vuote contenute in una lista
-		print (outString2)
+		# ~ print (outString2)
 		# ~ outString[:] = [item for item in outString if item != '']
 		str1='|'.join(str(r) for v in outString2 for r in v)
-		print(str1)
+		# ~ print(str1)
 	return str1
 	
 def print_output(output):
@@ -81,11 +81,11 @@ with open (output_file, 'w', newline = '') as fo:
 				flag_first = False
 			if line[0] == locus_tag_precedente:
 				if line[1] != '':
-					print(line[1])
+					# ~ print(line[1])
 					if not line[1] in term_precedente:
 						# ~ term_precedente = line[1].split('|')
 						term_precedente.append(line[1])
-						print(term_precedente)
+						# ~ print(term_precedente)
 
 						# ~ term_precedente = '|'.join(line[1])
 						# ~ print(term_precedente)
