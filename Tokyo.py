@@ -74,6 +74,7 @@ with open (output_file, 'w') as fo:
 			# ~ print('-------')
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
+print('RUNNING')
 print('Tempo di esecuzione: ', tempo_esecuzione, 'secondi')
 
 
