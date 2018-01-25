@@ -33,7 +33,6 @@ parser = argparse.ArgumentParser(description='TLiMe: TSV Line Merger')
 parser.add_argument('-i', '--input', help = 'inserire il file TSV di input')
 parser.add_argument('-o', '--output', default = 'output.txt', help = 'inserire il file di output')
 #~ parser.add_argument('-C', '--locus_tag', default = 0, help ='inserire la colonna dei Locus Tag (PRIMA COLONNA = 0), di default PRIMA COLONNA (=0)')
-
 #~ parser.add_argument('-c', '--data', default = 1, help='inserire la colonna deid ati da ordinare (PRIMA COLONNA = 0), di default SECONDA COLONNA (=1)')
 args = parser.parse_args()
 
