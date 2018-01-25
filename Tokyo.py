@@ -38,45 +38,53 @@ args = parser.parse_args()
 
 TSV_file = args.input
 output_file = args.output
-go_split_new=''
 output=[]
-output_printable = ''
-c1 = int(args.locus_tag)
-c2 = int(args.data)
+locus_tag_precedente = ''
+term_precedente = []
+print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
+print('TERM PRECEDENTE', term_precedente)
+#~ c1 = int(args.locus_tag)
+#~ c2 = int(args.data)
 
+def list_to_string(lista):
+	outString=""
+	for elem in lista:
+		outString += elem + '|'
+	return outString
+	
+def print_output(output):
+	for row in output:
+		print(row[0],';', list_to_string(row[1]))
+
+
+flag_first = True
 with open (output_file, 'w') as fo:
 	with open(TSV_file, 'r') as fi:
-		fi = csv.reader(fi, delimiter='\t')
-		locus_tag_precedente = ''
-		go_split_precedente = ''
-		flag = False
+		fi = csv.reader(fi, delimiter=';', quoting=csv.QUOTE_NONE)
 		for line in fi:
-			# ~ go_split_new = ''
-			locus_tag = str(line[c1])
-			go = str(line[c2])
-			go_split = go.split('|')
-			# ~ print('LOCUS TAG ', locus_tag)
-			# ~ print('GO ', go)
-			# ~ print('GO SPLITTED', go_split)
-			if flag : #iterazioni successive
-				if locus_tag == locus_tag_precedente : #condizione di uguaglianza tra due locus_tag successivi
-					go_split_new=go_split + go_split_precedente #unisce gli elementi precedenti agli elementi attuali
-					[output.append(item) for item in go_split_new if item not in output] #cerca tutti gli elementi della lista uguali e ne lascia solo 1
-					output_printable='|'.join(output)
-				else:
-					print(locus_tag_precedente,'\t', output_printable, file=fo)
-					print(locus_tag,'\t', go, file =fo) #<--------- perfetto
-					flag = False
-					# ~ go_split_precedente=''
-			else: #prima iterazione
-				locus_tag_precedente = locus_tag
-				go_split_precedente = go_split
-				flag = True
-				output=[]
-				# ~ print('LOCUS TAG PRECEDENTE', locus_tag_precedente)
-			# ~ print('GO SPLIT NEW ', go_split_new)
-			# ~ print('FLAG' ,flag)
-			# ~ print('-------')
+			if flag_first:
+				locus_tag_precedente =line[0]
+				flag_first = False
+			#~ print('LOCUS TAG PRECEDENTE ',locus_tag_precedente)
+			if line[0] == locus_tag_precedente:
+				#~ print('+')
+				if line[1] != '':
+					if not line[1] in term_precedente:
+						term_precedente.append(line[1])
+				#~ print('^')
+			else:
+				#~ print(locus_tag_precedente,',',term_precedente, '@')
+				output.append([locus_tag_precedente, term_precedente])
+				term_precedente=[]
+				locus_tag_precedente = line[0]
+				if line[1] != '':
+					if not line[1] in term_precedente:
+						term_precedente.append(line[1])
+		#~ print(locus_tag_precedente,',',term_precedente, '*')
+		output.append([locus_tag_precedente, term_precedente])
+		print_output(output)
+
+				#~ term_precedente = ''
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
 print('RUNNING')
