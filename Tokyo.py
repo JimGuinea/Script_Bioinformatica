@@ -48,8 +48,13 @@ print('TERM PRECEDENTE', term_precedente)
 
 def list_to_string(lista):
 	outString=""
+	flag =False
 	for elem in lista:
-		outString += elem + '|'
+		if flag:
+			outString += '|' + elem
+		else:
+			outstring += elem + '|'
+			flag = True
 	return outString
 	
 def print_output(output):
