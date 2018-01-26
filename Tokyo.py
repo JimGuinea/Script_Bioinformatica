@@ -51,49 +51,44 @@ term_precedente = []
 line_merged = []
 
 def list_to_string(lista):
-	outString=[]
-	outString2=[]
-	str1=''
-	for elem in lista:
-		outString.append(elem)
-		outString2 = [sublist for sublist in outString if any(sublist)] #ripulisce le sottoliste vuote contenute in una lista
-		str1=Divisor.join(str(r) for v in outString2 for r in v) #unisce le sottoliste in una stringa dividendole con il carattere |
-	return str1
+	if len(lista) == 0:
+		return ""
+	return "|".join(map(str,lista))
 	
 def print_output(output):
 	for row in output:
-		print(row[0] + divider + list_to_string(row[1]), file=fo)
+		print(row[0] + divider + list_to_string(row[1]), file=fo) # row1: [go1, go2, ..]
 
-
+print('RUNNING')
 flag_first = True
-with open (output_file, 'w', newline = '') as fo:
-	with open(TSV_file, 'r') as fi:
-		fi = csv.reader(fi, delimiter=char, quoting=csv.QUOTE_NONE)
-		for line in fi:
-			line[1] = line[1].split(Divisor)
-
+with open (output_file, 'w', newline = '') as fo, open(TSV_file, 'r') as fi:
+	fi = csv.reader(fi, delimiter=char, quoting=csv.QUOTE_NONE)
+	for line in fi:
+		line[1] = line[1].split(Divisor)
+		for go in line[1]:
+			print("GO", go)
 			if flag_first:
 				locus_tag_precedente =line[0]
 				flag_first = False
 			if line[0] == locus_tag_precedente:
-				if line[1] != '':
-					print('LINE 1 ', line[1])
-					print('TERM 1 ', term_precedente)
-					if not line[1] in term_precedente:
-						term_precedente.append(line[1])
+				if go != '':
+					# print('LINE 1 ', line[1])
+					# print('TERM 1 ', term_precedente)
+					if go not in term_precedente:
+						term_precedente.append(go)
 			else:
 				output.append([locus_tag_precedente, term_precedente])
 				term_precedente=[]
 				locus_tag_precedente = line[0]
-				if line[1] != '':
-					if not line[1] in term_precedente:
-						term_precedente.append(line[1])
-		#~ term_precedente = list(set(term_precedente))
-		
-		
-		output.append([locus_tag_precedente, term_precedente])
-		print('RUNNING')
-		print_output(output)
+				if go != '':
+					if go not in term_precedente:
+						term_precedente.append(go)
+	#~ term_precedente = list(set(term_precedente))
+	
+
+	output.append([locus_tag_precedente, term_precedente])
+	# print(output)
+	print_output(output)
 
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
