@@ -35,7 +35,7 @@ parser.add_argument('-i', '--input', help = 'inserire il file TSV di input', met
 parser.add_argument('-o', '--output', default = 'output.txt', help = 'inserire il file di output', metavar='')
 parser.add_argument('-d', '--divider', default = ',', help= 'divisore delle colonne per il file CSV di output (default= , )', metavar='')
 parser.add_argument('-D', '--Divider', default = '|', help= 'divisore per i terms della seconda colonna (default = | )', metavar='')
-parser.add_argument('-C', '--Character', default = ';', help = 'divisore delle colonne per file CSV di input (defailt= ;)', metavar='') 
+parser.add_argument('-C', '--Character', default = ';', help = 'divisore delle colonne per file CSV di input (default= ;)', metavar='') 
 args = parser.parse_args()
 
 
