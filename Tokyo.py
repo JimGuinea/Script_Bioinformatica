@@ -32,7 +32,7 @@ tempo_iniziale = time.time()
 parser = argparse.ArgumentParser(description='TLiMe: TSV Line Merger. Questo programma permette di unire tutti gli elementi appartenenti ad uno stesso locus tag in un file CSV')
 
 parser.add_argument('-i', '--input', help = 'inserire il file TSV di input', metavar='')
-parser.add_argument('-o', '--output', default = 'output.txt', help = 'inserire il file di output', metavar='')
+parser.add_argument('-o', '--output', default = 'output.CSV', help = 'inserire il file di output', metavar='')
 parser.add_argument('-d', '--divider', default = ',', help= 'divisore delle colonne per il file CSV di output (default= , )', metavar='')
 parser.add_argument('-D', '--Divider', default = '|', help= 'divisore per i terms della seconda colonna (default = | )', metavar='')
 parser.add_argument('-C', '--Character', default = ';', help = 'divisore delle colonne per file CSV di input (default= ;)', metavar='') 
@@ -59,14 +59,16 @@ def print_output(output):
 	for row in output:
 		print(row[0] + divider + list_to_string(row[1]), file=fo) # row1: [go1, go2, ..]
 
+
 print('RUNNING')
 flag_first = True
+
 with open (output_file, 'w', newline = '') as fo, open(TSV_file, 'r') as fi:
 	fi = csv.reader(fi, delimiter=char, quoting=csv.QUOTE_NONE)
 	for line in fi:
 		line[1] = line[1].split(Divisor)
 		for go in line[1]:
-			print("GO", go)
+			# ~ print("GO", go)
 			if flag_first:
 				locus_tag_precedente =line[0]
 				flag_first = False
@@ -83,9 +85,6 @@ with open (output_file, 'w', newline = '') as fo, open(TSV_file, 'r') as fi:
 				if go != '':
 					if go not in term_precedente:
 						term_precedente.append(go)
-	#~ term_precedente = list(set(term_precedente))
-	
-
 	output.append([locus_tag_precedente, term_precedente])
 	# print(output)
 	print_output(output)
