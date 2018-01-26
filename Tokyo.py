@@ -77,6 +77,8 @@ with open (output_file, 'w', newline = '') as fo:
 				flag_first = False
 			if line[0] == locus_tag_precedente:
 				if line[1] != '':
+					print('LINE 1 ', line[1])
+					print('TERM 1 ', term_precedente)
 					if not line[1] in term_precedente:
 						term_precedente.append(line[1])
 			else:
@@ -86,6 +88,9 @@ with open (output_file, 'w', newline = '') as fo:
 				if line[1] != '':
 					if not line[1] in term_precedente:
 						term_precedente.append(line[1])
+		#~ term_precedente = list(set(term_precedente))
+		
+		
 		output.append([locus_tag_precedente, term_precedente])
 		print('RUNNING')
 		print_output(output)
