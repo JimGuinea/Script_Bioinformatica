@@ -23,11 +23,13 @@ output_file = args.output
 verbose = True
 with open (output_file, 'w', newline = '') as fo:
     one_percent = rows/100
+    if one_percent == 0:
+        one_percent = 1
     for title in range(rows):
-        # if verbose:
-        #     progress = rows % one_percent
-        #     if rows % one_percent == 0: 
-        #         print(progress + "%...")
+        if verbose:
+            progress = title % one_percent
+            if progress == 0: 
+                print(str((int(title/one_percent))) + "%...")
         for num_title in range(0, 5): # num_title: number of occurrances of the same title
             num_go = random.randint(0, gos)
             go_list = []
