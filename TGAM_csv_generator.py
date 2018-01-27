@@ -12,9 +12,9 @@ start_time = time.time()
 
 parser = argparse.ArgumentParser(description='TGAM CSV GENERATOR')
 
-parser.add_argument('-r', '--rows', default=100, help = 'Number of rows for output file', type=int)
-parser.add_argument('-g', '--go', default=10, help = 'Max of random GO per row', type=int)
-parser.add_argument('-o', '--output', default="auto_generated.csv", help = 'Output file name')
+parser.add_argument('-r', '--rows', default=100, help = 'Number of rows for output file', type=int, metavar ='')
+parser.add_argument('-g', '--go', default=10, help = 'Max of random GO per row', type=int, metavar ='')
+parser.add_argument('-o', '--output', default="auto_generated.csv", help = 'Output file name', metavar ='')
 
 args = parser.parse_args()
 rows = args.rows if args.rows < 100000000 and args.rows >= 0 else 100000000
