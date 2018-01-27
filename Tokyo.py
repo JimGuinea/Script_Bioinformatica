@@ -47,7 +47,7 @@ char= args.Character
 
 output=[]
 locus_tag_precedente = ''
-term_precedente = []
+go_out_list = []
 line_merged = []
 
 def list_to_string(lista):
@@ -59,6 +59,8 @@ def print_output(output):
 	for row in output:
 		print(row[0] + divider + list_to_string(row[1]), file=fo) # row1: [go1, go2, ..]
 
+def print_mtag(title, go_list):
+	print(title + divider + list_to_string(go_list), file=fo)
 
 print('RUNNING')
 flag_first = True
@@ -66,28 +68,24 @@ flag_first = True
 with open (output_file, 'w', newline = '') as fo, open(TSV_file, 'r') as fi:
 	fi = csv.reader(fi, delimiter=char, quoting=csv.QUOTE_NONE)
 	for line in fi:
-		line[1] = line[1].split(Divisor)
-		for go in line[1]:
-			# ~ print("GO", go)
-			if flag_first:
-				locus_tag_precedente =line[0]
-				flag_first = False
-			if line[0] == locus_tag_precedente:
-				if go != '':
-					# print('LINE 1 ', line[1])
-					# print('TERM 1 ', term_precedente)
-					if go not in term_precedente:
-						term_precedente.append(go)
-			else:
-				output.append([locus_tag_precedente, term_precedente])
-				term_precedente=[]
-				locus_tag_precedente = line[0]
-				if go != '':
-					if go not in term_precedente:
-						term_precedente.append(go)
-	output.append([locus_tag_precedente, term_precedente])
-	# print(output)
-	print_output(output)
+		if flag_first:
+			locus_tag_precedente = line[0]
+			flag_first = False
+		go_in_list = line[1].split(Divisor)
+		if line[0] == locus_tag_precedente:
+			for go in go_in_list:
+				if go != '' and go not in go_out_list:
+						go_out_list.append(go)
+		else:
+			# new locus_tag fond -> print the old one
+			print_mtag(locus_tag_precedente, go_out_list)
+			go_out_list=[]
+			locus_tag_precedente = line[0]
+			for go in go_in_list:
+				if go != '' and go not in go_out_list:
+						go_out_list.append(go)
+	# print last mtag	
+	print_mtag(line[0], go_out_list) # better print asap in order to free memory
 
 tempo_finale=time.time()
 tempo_esecuzione= tempo_finale-tempo_iniziale
