@@ -31,19 +31,21 @@ tempo_iniziale = time.time()
 
 parser = argparse.ArgumentParser(description='TLiMe: TSV Line Merger. Questo programma permette di unire tutti gli elementi appartenenti ad uno stesso locus tag in un file CSV')
 
-parser.add_argument('-i', '--input', help = 'inserire il file TSV di input', metavar='')
-parser.add_argument('-o', '--output', default = 'output.CSV', help = 'inserire il file di output', metavar='')
-parser.add_argument('-d', '--divider', default = ',', help= 'divisore delle colonne per il file CSV di output (default= , )', metavar='')
+parser.add_argument('-i', '--input', help = 'inserire il file TSV di INPUT', metavar='')
+parser.add_argument('-o', '--output', default = '_OUTPUT.CSV', help = 'inserire il file di OUTPUT', metavar='')
+parser.add_argument('-d', '--divider', default = ',', help= 'divisore delle colonne per il ile CSV di OUTPUT (default= , )', metavar='')
 parser.add_argument('-D', '--Divider', default = '|', help= 'divisore per i terms della seconda colonna (default = | )', metavar='')
-parser.add_argument('-C', '--Character', default = ';', help = 'divisore delle colonne per file CSV di input (default= ;)', metavar='') 
+parser.add_argument('-C', '--Character', default = ';', help = 'divisore delle colonne per file CSV di INPUT (default= ;)', metavar='') 
+parser.add_argument('-s', '--single', action = "store_true" , help = 'opzione che fa stampare i term singolarmente, riga per riga')
 args = parser.parse_args()
 
 
 TSV_file = args.input
-output_file = args.output
+output_file = os.path.splitext(args.input)[0]+args.output #leva l'estensione dal file di input e crea il file di output come "file_di_input_OUTPUT.csv"
 divider = args.divider
 Divisor = args.Divider
 char= args.Character
+flag_single = args.single
 
 output=[]
 locus_tag_precedente = ''
@@ -55,12 +57,13 @@ def list_to_string(lista):
 		return ""
 	return "|".join(map(str,lista))
 	
-def print_output(output):
-	for row in output:
-		print(row[0] + divider + list_to_string(row[1]), file=fo) # row1: [go1, go2, ..]
-
 def print_mtag(title, go_list):
-	print(title + divider + list_to_string(go_list), file=fo)
+	if flag_single:					#Se è attiva l'opzione "single" stampa singolarmente per ogni GO con il rispettivo LOCUS_TAG
+		#~ print('flag_single TRUE')
+		for elem in go_list:
+			print(title+divider+elem, file=fo)
+	else:
+		print(title + divider + list_to_string(go_list), file=fo)
 
 print('RUNNING')
 flag_first = True
@@ -78,7 +81,7 @@ with open (output_file, 'w', newline = '') as fo, open(TSV_file, 'r') as fi:
 						go_out_list.append(go)
 		else:
 			# new locus_tag fond -> print the old one
-			print_mtag(locus_tag_precedente, go_out_list)
+			print_mtag(locus_tag_precedente, go_out_list) 
 			go_out_list=[]
 			locus_tag_precedente = line[0]
 			for go in go_in_list:
