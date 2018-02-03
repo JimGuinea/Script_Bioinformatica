@@ -41,7 +41,12 @@ args = parser.parse_args()
 
 
 TSV_file = args.input
-output_file = os.path.splitext(args.input)[0]+args.output #leva l'estensione dal file di input e crea il file di output come "file_di_input_OUTPUT.csv"
+if args.output == "_OUTPUT.CSV":
+	print(args.output)
+	output_file = os.path.splitext(args.input)[0]+args.output #leva l'estensione dal file di input e crea il file di output come "file_di_input_OUTPUT.csv"
+else:
+	output_file =args.output
+
 divider = args.divider
 Divisor = args.Divider
 char= args.Character
